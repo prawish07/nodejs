@@ -49,7 +49,8 @@ app.put("/user/update/:id", (req, res) => {
         console.log(results);
         if (results.affectedRows === 1) {
           res.status(200).json({ success: true, message: "Updated" });
-        } else res.status(200).json({ success: false, message: "not Updated" });
+        }
+         else res.status(200).json({ success: false, message: "not Updated" });
       },
     );
   } else res.status(408).json({ success: false, message: "User not updated" });
